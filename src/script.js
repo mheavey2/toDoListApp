@@ -74,55 +74,20 @@ function addTask(task) {
     todoList.removeChild(listItem);
   });
 
+  // when edit button is clicked add contenteditable to allow edits and save them
   editButton.addEventListener("click", function () {
-    const isEditing = taskItem.classList.contains("editing");
-
-    if (!isEditing) {
+    if (!taskDetails.isContentEditable) {
       taskDetails.setAttribute("contenteditable", "true");
       taskDetails.classList.add("editing");
+
       taskDetails.focus();
 
-      editButton.textContent = "Save";
+      editButton.innerHTML = '<img src="./img/save.png" alt="save"   />';
     } else {
-      taskDetails.removeAttribute("contenteditable");
+      taskDetails.setAttribute("contenteditable", "false");
       taskDetails.classList.remove("editing");
       taskDetails.blur();
+      editButton.innerHTML = '<img src="./img/edit.png" alt="edit"  />';
     }
-    //   if (isEditing) {
-    //     // console.log("isEditing: " + taskItem.childNodes);
-    //     // console.log(this.previousSibling);
-    //     // console.log(this.previousSibling.nodeValue);
-    //     taskDetails.textContent = this.previousSibling.value;
-    //     taskItem.removeChild(input);
-    //     taskDetails.removeAttribute("hidden");
-    //     taskItem.classList.remove("editing");
-    //     editButton.textContent = "Edit";
-    //   } else {
-    //     const input = document.createElement("input");
-    //     input.setAttribute("id", "task-edit-input");
-    //     input.type = "text";
-    //     input.value = taskDetails.textContent;
-    //     console.log("input value: " + input.value);
-    //     taskItem.insertBefore(input, taskDetails);
-    //     taskDetails.setAttribute("hidden", "hidden");
-    //     taskItem.classList.add("editing");
-    //     let taskupdateValue = document.getElementById("task-edit-input").value;
-    //     editButton.textContent = "Save";
-
-    //     // console.log("else:::: " + taskItem.childNodes[1].textContent);
-    //     console.log("updateValue is: " + taskupdateValue);
-    //   }
-
-    //   // update using windows prompt
-    //   // const update = prompt("Edit Task:", taskDetails.textContent);
-    //   // if (update !== null) {
-    //   //   taskDetails.textContent = update;
-    //   // }
   });
 }
-
-// hide complete?
-// edit task function
-// save tasks to local storage
-// load tasks from storage
-//
