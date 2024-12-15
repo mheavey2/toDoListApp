@@ -1,5 +1,5 @@
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Quicksand", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +21,7 @@ body {
 }
 
 #todo-form input[type="text"] {
-  width: 70%;
+  width: 60%;
   padding: 10px;
   border: 2px solid #ddd;
   border-radius: 40px;
@@ -55,4 +55,25 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#task-item-span {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ddd;
+}
+#task-item-span :first-child {
+  margin-right: 10px;
+}
+
+#modify-task-span button {
+  margin: 2px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#modify-task-span img {
+  height: 1.75em;
 }

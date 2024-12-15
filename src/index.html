@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js" async></script>
     <link rel="stylesheet" href="style.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <title>ToDo List App</title>
   </head>
   <body>
     <div id="todo-container">
       <h1>To Do List</h1>
+
       <!-- the container to add new tasks to the list -->
       <form id="todo-form">
         <input type="text" placeholder="Add a new task" id="todo-input" />
-        <button type="submit">Add Task</button>
+        <button type="submit" id="submit-button">Add Task</button>
       </form>
+
       <!-- the to do list -->
       <ul id="todo-list"></ul>
     </div>
