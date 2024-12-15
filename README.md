@@ -16,7 +16,7 @@ It is built using HTML, CSS, and Javascript.
    ![Task Added view](src/img/toDoListTaskAdded.png)
 
 3. The task can be edited in-situ and resaved using the save button
-4. ![Edit task view](src/img/toDoListEditTask.png)
+   ![Edit task view](src/img/toDoListEditTask.png)
 
 ## Future Improvements
 
